@@ -49,7 +49,7 @@ const Calendar = () => {
     let calendarApi = selectInfo.view.calendar;
 
     calendarApi.unselect(); // clear date selection
-    
+
     if (title) {
       calendarApi.addEvent({
         id: createEventId(),
@@ -57,7 +57,7 @@ const Calendar = () => {
         start: selectInfo.startStr,
         end: selectInfo.endStr,
         allDay: selectInfo.allDay,
-        desc:"fsddsgsdgsd"
+        desc: "fsddsgsdgsd",
       });
     }
   };
@@ -79,7 +79,16 @@ const Calendar = () => {
 
   return (
     <Stack direction={"row"}>
-      <Paper className="demo-app-sidebar">
+      <Paper
+        sx={{
+          display: {
+            xs: "none",
+            md: " block", // 'xs' refers to extra-small screens
+            // 'sm' and larger will display the Paper
+          },
+        }}
+        className="demo-app-sidebar alias    "
+      >
         <h2 style={{ textAlign: "center" }}>
           All Events ({currentEvents.length})
         </h2>

@@ -25,22 +25,10 @@ const Bar = ({ isDashboard = false }) => {
       Germany: 1900,
     },
 
-    {
-      year: 2022,
-      Spain: 1200,
-      France: 1700,
-      Germany: 2000,
-    },
-
-    {
-      year: 2023,
-      Spain: 1260,
-      France: 1709,
-      Germany: 2080,
-    },
+  
   ];
   return (
-    <Box sx={{ height: isDashboard ? "300px" : "75vh" }}>
+    <Box sx={{ height: isDashboard ? "300px" : "75vh" , }}>
       <ResponsiveBar
         data={data}
         keys={["Spain", "France", "Germany"]}
